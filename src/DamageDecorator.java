@@ -3,7 +3,7 @@ public abstract class DamageDecorator extends DamageCalculator {
     protected DamageCalculator damageCalculator;
 
     public DamageDecorator(DamageCalculator damageCalculator) {
-        super(new DamageCalculator.Builder()); // Dummy builder to satisfy the superclass
+        super(new DamageCalculator.Builder()); // Dummy builder om aan de superklasse te voldoen.
         this.damageCalculator = damageCalculator;
     }
 
