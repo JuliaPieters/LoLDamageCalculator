@@ -1,10 +1,9 @@
 // MagicDamageDecorator.java
 public class MagicDamageDecorator extends DamageDecorator {
-    private double magicDamage;
+    private double magicDamage = 30;
 
-    public MagicDamageDecorator(DamageCalculator damageCalculator, double magicDamage) {
+    public MagicDamageDecorator(DamageCalculator damageCalculator) {
         super(damageCalculator);
-        this.magicDamage = magicDamage;
     }
 
     @Override

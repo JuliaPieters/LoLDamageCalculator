@@ -12,10 +12,10 @@ public class DamageCalculator {
 
     // Builder class
     public static class Builder {
-        private double baseDamage;
+        private double baseDamage = 100;
 
-        public Builder baseDamage(double baseDamage) {
-            this.baseDamage = baseDamage;
+        public Builder baseDamage() {
+
             return this;
         }
 

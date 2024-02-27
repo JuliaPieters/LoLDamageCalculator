@@ -1,10 +1,9 @@
 // BonusDamageDecorator.java
 public class BonusDamageDecorator extends DamageDecorator {
-    private double bonusDamage;
+    private double bonusDamage = 20;
 
-    public BonusDamageDecorator(DamageCalculator damageCalculator, double bonusDamage) {
+    public BonusDamageDecorator(DamageCalculator damageCalculator) {
         super(damageCalculator);
-        this.bonusDamage = bonusDamage;
     }
 
     @Override
