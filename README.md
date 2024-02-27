@@ -57,3 +57,11 @@ Voor deze opdracht was het de bedoeling dat we als duo zouden samenwerken. We he
 3. Voer het bestand `Main.java` uit.
 
 4. Volg de instructies in de console om waarden in te voeren en de berekende damage te bekijken.
+
+
+## Bronnen
+- https://github.com/Jimmaphy/data-storage-utility/blob/SDE/src/nl/sourceassist/datastorageutility/commander/Commander.java
+
+- https://refactoring.guru/design-patterns/behavioral-patterns
+
+- https://github.com/Jimmaphy/data-storage-utility/blob/SDE/src/nl/sourceassist/datastorageutility/state/State.java
