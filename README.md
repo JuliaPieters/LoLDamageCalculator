@@ -41,7 +41,7 @@ Deze design patterns werken natuurlijk per type verschillende met elkaar samen.
 
 ![classdiagram.png](src%2Fclassdiagram.png)
 
-
+Dit klassendiagram laat de samenwerking tussen de verschillende design patterns zien. Hier is te zien dat DamageCalculator een builder bevat die er voor zorgt dat er basedamage en een calculator wordt teruggegeven mits hier gebruik van wordt gemaakt. De DamageDecorator is van de damagacalculator klasse afgeleid en is de basisklasse voor de MagicDamageDecorator en BonusDamageDecorator. De BaseDamageFactory, BonusDamageFactory en MagicDamageFactory maken gebruik van de DamageFactoryInterface. Deze interface biedt een methode aan die er voor zorgt om de verschillende soorten damage te berekenen.
 ## De samenwerking
 Voor deze opdracht was het de bedoeling dat we als duo zouden samenwerken. We hebben gezamenlijk besloten om pair programming te gebruiken, aangezien we dit allebei prettig vinden en elkaar op die manier kunnen ondersteunen. Doordat we beide op hetzelfde niveau zitten, kunnen we samen brainstormen en oplossingen vinden als we ergens tegenaan lopen. We hebben achter Julia's computer gezeten en af en toe gewisseld van wie de code typt, en wie probeert na te denken wat de volgende stap in de code kan zijn. We hebben hiervoor gekozen in plaats van dat we allebei achter verschillende computers zitten. Dit verklaart ook waarom wij weinig commits hebben gemaakt naar github. Een nadeel van dit was dat we niet gelijk de code hebben gepushed naar github, dus stel de computer was kapot gegaan dan was al onze code weg. Dit is een verbeterpuntje voor in de toekomst om wel tussendoor de code naar github te pushen om eventuele problemen te voorkomen.
 
