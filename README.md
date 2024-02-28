@@ -32,18 +32,20 @@ De volgende design patterns worden gebruikt in dit project:
 
 - **Builder-patroon**: Geïmplementeerd in `DamageCalculator.java` .
 - **Decorator-patroon**: Geïmplementeerd in `DamageDecorator.java`, `BonusDamageDecorator.java` en `MagicDamageDecorator.java` om functionaliteit toe te voegen aan de `DamageCalculator`.
-- **Factory-patroon**: Geïmplementeerd in `DamageTypeFactory.java` om instanties van verschillende soorten damage te creëren.
+- **Factory-patroon**: Geïmplementeerd in `DamageFactoryInterface.java`, `BaseDamageFactory`, `MagicDamageFactory` en `BonusDamageFactory` om instanties van verschillende soorten damage te creëren.
 
 Deze design patterns werken natuurlijk per type verschillende met elkaar samen.
 - Creational Pattern: DamageCalculator met DamageCalculator.Builder want deze Builder maakt de base damage aan en zorgt er voor dat de calculator die er voor zorgt dat er dingen berekent kunnen worden wordt teruggegeven
-- Structural Pattern: DamageDecorator en de implementaties ervan dus de MagicDamageDecorator en de BonusDamageDecorator.
-- Behavioral Pattern: Het gebruik van decorators (MagicDamageDecorator en BonusDamageDecorator) wordt gedaan door de factory die er voor zorgt dat die functionaliteit kan worden aangepast voor de uiteindelijke berekening.
+- Structural Pattern: DamageDecorator en de implementaties ervan dus de MagicDamageDecorator en de BonusDamageDecorator. Deze decorators zorgen ervoor dat de ingevoerde damagewaarde wordt doorgegeven.
+- Behavioral Pattern: Er is gebruik gemaakt van een state, deze laat zien in welke toestand het programma zich bevind. In ons geval is dat dus START, COMMAND en DONE.
 
 ![classdiagram.png](src%2Fclassdiagram.png)
 
 Dit klassendiagram laat de samenwerking tussen de verschillende design patterns zien. Hier is te zien dat DamageCalculator een builder bevat die er voor zorgt dat er basedamage en een calculator wordt teruggegeven mits hier gebruik van wordt gemaakt. De DamageDecorator is van de damagacalculator klasse afgeleid en is de basisklasse voor de MagicDamageDecorator en BonusDamageDecorator. De BaseDamageFactory, BonusDamageFactory en MagicDamageFactory maken gebruik van de DamageFactoryInterface. Deze interface biedt een methode aan die er voor zorgt om de verschillende soorten damage te berekenen.
 ## De samenwerking
-Voor deze opdracht was het de bedoeling dat we als duo zouden samenwerken. We hebben gezamenlijk besloten om pair programming te gebruiken, aangezien we dit allebei prettig vinden en elkaar op die manier kunnen ondersteunen. Doordat we beide op hetzelfde niveau zitten, kunnen we samen brainstormen en oplossingen vinden als we ergens tegenaan lopen. We hebben achter Julia's computer gezeten en af en toe gewisseld van wie de code typt, en wie probeert na te denken wat de volgende stap in de code kan zijn. We hebben hiervoor gekozen in plaats van dat we allebei achter verschillende computers zitten. Dit verklaart ook waarom wij weinig commits hebben gemaakt naar github. Een nadeel van dit was dat we niet gelijk de code hebben gepushed naar github, dus stel de computer was kapot gegaan dan was al onze code weg. Dit is een verbeterpuntje voor in de toekomst om wel tussendoor de code naar github te pushen om eventuele problemen te voorkomen.
+Voor deze opdracht was het de bedoeling dat we als duo zouden samenwerken. We hebben gezamenlijk besloten om pair programming te gebruiken, aangezien we dit allebei prettig vinden en elkaar op die manier kunnen ondersteunen. Doordat we beide op hetzelfde niveau zitten, kunnen we samen brainstormen en oplossingen vinden als we ergens tegenaan lopen. We hebben achter Julia's computer gezeten en af en toe gewisseld van wie de code typt, en wie probeert na te denken wat de volgende stap in de code kan zijn. We hebben hiervoor gekozen in plaats van dat we allebei achter verschillende computers zitten. Dit verklaart ook waarom wij weinig commits hebben gemaakt naar github. Een nadeel van dit was dat we niet gelijk de code hebben gepushed naar github, dus stel de computer was kapot gegaan dan was al onze code weg. Dit is een verbeterpuntje voor in de toekomst om wel tussendoor de code naar github te pushen om eventuele problemen te voorkomen. 
+
+Voor de resit hebben wij op dezelfde manier samengewerkt. We hebben de factory opgedeeld in drie verschillende factory's per damage. Ook hebben we er voor gezorgd dat de decorator functionaliteit heeft, doordat de decorator waardes doorgeeft. En als laatst hebben wij een state toegevoegd zodat wij een behavioral design pattern hebben geïmplementeerd.
 
 
 
