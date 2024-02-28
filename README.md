@@ -8,18 +8,23 @@
 De opdracht:
 Voor deze opdracht is het de bedoeling dat er een Java-consoletoepassing wordt ontwikkelt die diverse design patterns omvat. Deze patterns moeten variëren in types, zoals structurele en creatieve patterns. Het is belangrijk dat deze opdracht in tweetallen wordt uitgevoerd, zodat er samen kan worden gekeken naar verschillende design patterns en van elkaars inzichten kunt leren.
 
-De applicatie: League of Legends Damagecalculator is een applicatie waarmee de gebruiker de totale hoeveelheid damage kan berekenen doormiddel van basedamage, magicdamage en bonusdamage. Deze applicatie werkt doormiddel van verschillende design patterns. Deze applicatie bevat de design patterns Builder, Decorator en Factory.
+De applicatie: League of Legends Damagecalculator is een applicatie waarmee de gebruiker de totale hoeveelheid damage kan berekenen doormiddel van basedamage, magicdamage en bonusdamage. Deze applicatie werkt doormiddel van verschillende design patterns. Deze applicatie bevat de design patterns Builder, Decorator, Factory en State.
 
 ## De applicatie files
 
 Deze applicatie bevat verschillende files die met elkaar samenwerken tot een gehele applicatie:
 
-- `DamageCalculator.java`: Dient als de basis van de applicatie. Deze file zorgt door middel van het Design Pattern builder er voor dat de basedamage wordt gemaakt en dat de specifieke calculator wordt teruggegeven.
-- `DamageDecorator.java`: Is afgeleid van de klasse damagecalculator en is de basisklasse voor de andere decoratorklassen.
-- `BonusDamageDecorator.java`: Deze decorator dient als specifieke toevoeging van bonus damage aan de bestaande damagecalculator.
-- `MagicDamageDecorator.java`: Deze decorator dient als specifieke toevoeging van magische damage aan de bestaande damagecalculator.
-- `DamageTypeFactory.java`: Deze factory zorgt er voor dat er verschillende varianten damage kunnen worden gemaakt en worden gecombineerd tot een totaal aantal damage.
+- `DamageCalculator.java`: Is verantwoordelijk voor het berekenen van damage. Het heeft een Builder class die helpt bij het maken van DamageCalculator objecten. Standaard wordt de schade ingesteld op een BaseDamage van 100 (Dit kan worden aangepast). De DamageCalculator klasse zelf heeft een methode genaamd calculateDamage() die de huidige damage teruggeeft.
 - `Main.java`: De hoofdklasse om het programma uit te voeren.
+- `DamageFactoryInterface`: Dit is een interface die dient als de basis voor het maken van Factory classes voor het maken van de verschillende soorten damage.
+- `BaseDamageFactory`:  maakt gebruik van de DamageFactoryInterface en biedt een methode genaamd createDamageCalculator. Wanneer je deze methode aanroept, moet je een DamageCalculator object doorgeven. Die methode maakt een DamageCalculator die er voor zorgt om BaseDamage te berekenen.
+- `BonusDamageFactory`: Doet hetzelfde als de BaseDamageFactory alleen dan voor de BonusDamage.
+- `MagicDamageFactory`: Doet hetzelfde als de BaseDamageFactory alleen dan voor de Magicdamage.
+- `Console`: Deze java class zorgt voor interactie met de console: writeLine() voor uitvoer naar de console, readLine() voor invoer van de gebruiker en clearConsole() om de console te wissen door lege regels af te drukken.
+- `DamageDecorator.java`: Is afgeleid van de klasse damagecalculator en is de basisklasse voor de andere decoratorklassen.
+- `BonusDamageDecorator`: Deze class zorgt er voor dat er een waarde van 20 damage wordt toegevoegd als de calculateDamage() wordt aangeroepen. Deze waarde kan worden aangepast.
+- `MagicDamageDecorator`: Deze class doet hetzelfde als BonusDamageDecorator en voegt in dit geval 30 damage toe. Deze waarde kan worden aangepast.
+- `State`: Deze State laat zien in welke verschillende toestanden het programma zich kan bevinden.
 
 ## Design Patterns
 
